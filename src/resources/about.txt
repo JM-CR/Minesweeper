@@ -1,0 +1,14 @@
+Este trabajo fue desarrollado en Java por:
+
+    Josue Mosiah Contreras Rocha
+    Hector Jair Hernandez Cortes
+    Bruno Valerio Fernandez
+
+Nuestro objetivo fue integrar todo lo visto en el curso en un proyecto que
+representara un reto de manera divertida, he aquí el porque de este trabajo.
+
+Profesor - Miguel Angel Barrientos Martinez
+
+Lugar de trabajo - Universidad Iberoamericana
+Fecha de entrega - 08/Mayo/2018
+Version 1.0.0

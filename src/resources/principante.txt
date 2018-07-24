@@ -1,0 +1,10 @@
+Mosh,2018-06-09,42
+Mosh,2018-05-05,46
+Josue,2018-05-08,49
+Josue,2018-07-03,54
+Josue Mosh,2018-05-05,78
+Jose,2018-07-06,87
+Josue Mosiah Contreras Rocha,2018-05-05,120
+null
+null
+null

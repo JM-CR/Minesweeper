@@ -1,0 +1,39 @@
+Introducción
+
+  Cada partida comienza con una cuadrícula sin marcas y es tu trabajo
+descubrir que casillas tienen minas y cuáles no.
+
+
+Reglas
+
+1. Algunas casillas tienen un número, este indica la cantidad de minas
+   alrededor.
+
+      Si una casilla tiene el número 3, significa que de las ocho casillas
+    que hay alrededor (si no es en una esquina o borde) hay 3 con minas
+    y 5 sin minas.
+
+2. Si se descubre una casilla sin número indica que ninguna de las casillas
+   vecinas tiene mina y éstas se descubren automáticamente.
+
+3. Si se descubre una casilla con una mina se pierde la partida.
+
+4. Se puede poner una marca en las casillas que el jugador piensa que hay
+   minas para ayudar a descubrir las que están cerca.
+
+    Esto se hace haciendo clic derecho.
+    Si se desea remover la marca se vuelve a presionar este clic.
+
+
+Modos de juego
+
+  El juego posee un sistema de récords para cada uno de los 4 niveles en el
+que se indica el menor tiempo en terminar el juego.
+
+Los niveles son:
+
+   1. Nivel principiante: 8 × 8 casillas, 10 minas y 1 vida.
+   2. Nivel intermedio: 16 × 16 casillas, 40 minas y 1 vida.
+   3. Nivel experto: 16 × 30 casillas, 99 minas y 1 vida.
+   4. Nivel personalizado: El usuario personaliza su juego eligiendo el
+                      número de minas, tamaño de la cuadrícula y vidas.

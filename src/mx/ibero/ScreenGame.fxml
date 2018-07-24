@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.RadioMenuItem?>
+<?import javafx.scene.control.SeparatorMenuItem?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.input.KeyCodeCombination?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane fx:id="borderPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" style="-fx-background-color: #9befd0;" styleClass="BorderPane" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mx.ibero.ScreenGameController">
+   <top>
+      <MenuBar maxHeight="-Infinity" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" style="-fx-background-color: #d1caca;" BorderPane.alignment="CENTER">
+         <menus>
+            <Menu text="_Partida">
+              <items>
+                <MenuItem mnemonicParsing="false" onAction="#menuItemNuevaPartida" text="Nueva Partida">
+                     <accelerator>
+                        <KeyCodeCombination alt="UP" code="N" control="UP" meta="UP" shift="UP" shortcut="DOWN" />
+                     </accelerator></MenuItem>
+                  <MenuItem mnemonicParsing="false" onAction="#menuItemReiniciarPartida" text="Reiniciar Partida">
+                     <accelerator>
+                        <KeyCodeCombination alt="UP" code="R" control="UP" meta="UP" shift="UP" shortcut="DOWN" />
+                     </accelerator></MenuItem>
+                  <SeparatorMenuItem mnemonicParsing="false" />
+                  <Menu text="_Dificultad">
+                     <items>
+                        <RadioMenuItem fx:id="principiante" mnemonicParsing="false" onAction="#radioMenuItemFacil" selected="true" text="Facil">
+                           <toggleGroup>
+                              <ToggleGroup fx:id="DifficultyGroup" />
+                           </toggleGroup></RadioMenuItem>
+                        <RadioMenuItem fx:id="intermedio" mnemonicParsing="false" onAction="#radioMenuItemIntermedio" text="Intermedio" toggleGroup="$DifficultyGroup" />
+                        <RadioMenuItem fx:id="avanzado" mnemonicParsing="false" onAction="#radioMenuItemDificil" text="Dificil" toggleGroup="$DifficultyGroup" />
+                        <RadioMenuItem fx:id="botonPersonalizar" mnemonicParsing="false" onAction="#radioMenuItemPersonalizada" text="Personalizada" toggleGroup="$DifficultyGroup" />
+                     </items>
+                  </Menu>
+                  <SeparatorMenuItem mnemonicParsing="false" />
+                  <Menu text="_Modo de Juego">
+                     <items>
+                        <RadioMenuItem mnemonicParsing="false" onAction="#radioItemTradicional" selected="true" text="Tradicional">
+                           <toggleGroup>
+                              <ToggleGroup fx:id="TypeGameGroup" />
+                           </toggleGroup>
+                        </RadioMenuItem>
+                        <RadioMenuItem mnemonicParsing="false" onAction="#radioItemVidasMultiples" text="Vidas Multiples" toggleGroup="$TypeGameGroup" />
+                     </items>
+                  </Menu>
+                  <SeparatorMenuItem mnemonicParsing="false" />
+                  <MenuItem onAction="#menuItemSalir" text="_Salir">
+                     <accelerator>
+                        <KeyCodeCombination alt="UP" code="X" control="UP" meta="UP" shift="UP" shortcut="DOWN" />
+                     </accelerator>
+                  </MenuItem>
+              </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="P_untuaciones">
+               <items>
+                <MenuItem mnemonicParsing="false" onAction="#puntuacionFacil" text="Facil" />
+                  <MenuItem mnemonicParsing="false" onAction="#puntuacionIntermedio" text="Intermedio" />
+                  <MenuItem mnemonicParsing="false" onAction="#puntuacionDificil" text="Dificil" />
+                  <MenuItem mnemonicParsing="false" onAction="#puntuacionPersonalizada" text="Personalizado" />
+               </items>
+            </Menu>
+            <Menu text="_Ayuda">
+              <items>
+                <MenuItem mnemonicParsing="false" onAction="#menuItemComoJugar" text="Como jugar...">
+                     <accelerator>
+                        <KeyCodeCombination alt="UP" code="H" control="UP" meta="UP" shift="UP" shortcut="DOWN" />
+                     </accelerator></MenuItem>
+                  <SeparatorMenuItem mnemonicParsing="false" />
+                  <MenuItem mnemonicParsing="false" onAction="#menuItemAcercaDe" text="Acerca de..." />
+              </items>
+            </Menu>
+         </menus>
+         <cursor>
+            <Cursor fx:constant="DEFAULT" />
+         </cursor>
+      </MenuBar>
+   </top>
+   <center>
+      <GridPane fx:id="terrenoMinas" gridLinesVisible="true" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" styleClass="tablero" BorderPane.alignment="CENTER">
+         <BorderPane.margin>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </BorderPane.margin></GridPane>
+   </center>
+   <left>
+      <VBox id="vbox" alignment="CENTER" BorderPane.alignment="CENTER">
+         <children>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="textEstado" text="Minas">
+               <font>
+                  <Font name="Algerian" size="14.0" />
+               </font></Text>
+            <Text fx:id="totMinas" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="textEstado" text="00" underline="true">
+               <font>
+                  <Font name="Century Gothic" size="14.0" />
+               </font></Text>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="textEstado" text="Banderas">
+               <font>
+                  <Font name="Algerian" size="14.0" />
+               </font></Text>
+            <Text fx:id="totBanderas" layoutX="10.0" layoutY="23.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="textEstado" text="00" underline="true">
+               <font>
+                  <Font name="Century Gothic" size="14.0" />
+               </font></Text>
+            <HBox prefHeight="100.0" prefWidth="100.0" styleClass="boxImagen" />
+         </children>
+      </VBox>
+   </left>
+   <bottom>
+      <HBox id="hbox" alignment="CENTER" BorderPane.alignment="CENTER">
+         <children>
+            <Text id="textoVidas" fx:id="textoVidas" fill="#030000" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="textEstado" textAlignment="CENTER">
+               <font>
+                  <Font name="Algerian" size="18.0" />
+               </font>
+            </Text>
+         </children>
+      </HBox>
+   </bottom>
+</BorderPane>

@@ -1,0 +1,139 @@
+.casilla
+{
+    -fx-background-color: #f7a926;
+    -fx-text-alignment: center;
+    -fx-content-display: center;
+
+    -fx-min-width: 35px;
+    -fx-max-width: 35px;
+
+    -fx-min-height: 35px;
+    -fx-max-height: 35px;
+
+    -fx-border-color: #101010;
+    -fx-border-width: 1;
+    -fx-border-radius: 3;
+    -fx-border-insets: 1px;
+
+    -fx-cursor: hand;
+}
+
+.casilla:hover
+{
+    -fx-background-color: #3e4042;
+}
+
+.casilla:disabled
+{
+    -fx-border-color: black;
+    -fx-border-width: 0.5;
+}
+
+.casillaMina
+{
+    -fx-background-color: white;
+    -fx-alignment: center;
+    -fx-border-width: 1;
+}
+
+.casillaNum
+{
+    -fx-background-color: white;
+    -fx-font-color: white;
+    -fx-text-fill: black;
+    -fx-stroke: true;
+    -fx-smooth: true;
+    -fx-font-weight: bolder;
+}
+
+.myDialog
+{
+    -fx-background-color: #505050;
+    -fx-background-image: url("/resources/mina.png");
+    -fx-alignment: center;
+}
+
+.tablero
+{
+    -fx-background-color: #56888d;
+}
+
+#vbox
+{
+    -fx-background-color: rgba(66, 106, 255, 0.54);
+    -fx-spacing: 20px;
+    -fx-padding: 0px 5px 0px 10px;
+    -fx-fill-width: true;
+    -fx-background-radius: 10px;
+}
+
+#textoVidas
+{
+    -fx-fill: white;
+    -fx-font-size: 23;
+}
+
+#hbox
+{
+    -fx-background-color: rgba(66, 106, 255, 0.54);
+    -fx-spacing: 20px;
+    -fx-padding: 0px 5px 0px 10px;
+    -fx-fill-width: true;
+}
+
+.textEstado
+{
+    -fx-font-weight: bolder;
+    -fx-font-size: 16;
+}
+
+.BorderPane
+{
+    -fx-background-image: url("/resources/mario.jpg");
+    -fx-background-repeat: stretch;
+    -fx-background-position: center center;
+}
+
+.boxImagen
+{
+    -fx-background-image: url("/resources/mina.png");
+    -fx-background-repeat: stretch;
+    -fx-background-size: 100 100;
+    -fx-background-position: left center;
+}
+
+.text-puntuacion
+{
+    -fx-text-alignment: center;
+}
+
+#content-puntuacion
+{
+
+}
+
+.text-personalizado
+{
+
+}
+
+.input-personalizado
+{
+
+}
+
+#content-personalizado
+{
+
+}
+
+#content-como-jugar
+{
+
+}
+
+#content-acerca-de
+{
+
+}
+
