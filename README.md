@@ -1,4 +1,4 @@
-# Minesweepper
+# Minesweeper
 
 Game made in Java 9 using the OOP paradigm
 
